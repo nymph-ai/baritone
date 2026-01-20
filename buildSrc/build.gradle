@@ -40,5 +40,9 @@ dependencies {
     implementation group: 'com.google.code.gson', name: 'gson', version: '2.9.0'
     implementation group: 'commons-io', name: 'commons-io', version: '2.7'
 
-    implementation group: 'xyz.wagyourtail.unimined', name: 'xyz.wagyourtail.unimined.gradle.plugin', version: '1.2.9'
+    implementation('xyz.wagyourtail.unimined:xyz.wagyourtail.unimined.gradle.plugin:1.4.1') {
+        exclude group: 'net.minecraftforge', module: 'binarypatcher'
+    }
+    implementation group: 'xyz.wagyourtail.unimined.mapping', name: 'unimined-mapping-library-jvm', version: '1.2.1'
+    implementation 'net.neoforged.installertools:binarypatcher:4.0.6:fatjar'
 }
